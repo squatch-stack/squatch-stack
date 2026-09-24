@@ -65,7 +65,7 @@ both tracks.
 |---|---|
 | **[GitHub Sponsors](https://github.com/sponsors/squatch-stack)** | Monthly or one-time. GitHub takes no fee on sponsorships from personal accounts. |
 | **Open Collective** <sub>(coming soon)</sub> <!-- https://opencollective.com/OPEN_COLLECTIVE_SLUG --> | Companies that want a public ledger of every expense. |
-| **Patreon** <sub>(coming soon)</sub> <!-- https://www.patreon.com/PATREON_HANDLE --> | A monthly build log with demos, and skin packs once the skin format opens. |
+| **[Patreon](https://www.patreon.com/SquatchStack)** | A monthly build log with demos, and skin packs once the skin format opens. |
 | **[Ko-fi](https://ko-fi.com/squatchstack)** | A one-off tip, any amount. |
 | **Buy Me a Coffee** <sub>(coming soon)</sub> <!-- https://www.buymeacoffee.com/BMAC_HANDLE --> | A coffee from the tuner page. |
 
