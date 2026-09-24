@@ -1,57 +1,79 @@
 <p align="center">
-  <img src="banner.svg" width="100%" alt="Squatch Stack — the sasquatch and the saguaro as the two sources of one interference field">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+    <img src="assets/banner.svg" width="100%" alt="Squatch Stack: open tools for guitarists, and open research in holographic computing. Both run on phase.">
+  </picture>
 </p>
 
-<h1 align="center">Squatch Stack</h1>
+**Open tools for guitarists, and open research in holographic computing.**
+A strobe tuner reads a string by watching the phase of each harmonic drift. A
+hologram stores data as unit phasors whose phases add. Squatch Stack follows
+that one idea in two directions, in the open, and measures before it claims.
 
-<p align="center"><b>Software that finds harmony, shipped.</b><br>
-The build account of <a href="https://squatch.cc">Squatch CC</a>, a
-software &amp; app studio in the Tucson desert — local-first software,
-hard problems, the right answer rather than the popular one.</p>
+### [Try the Squatch Tuner in your browser &rarr;](https://squatch-stack.github.io/squatch-tuner/)
+
+A software strobe that reads a string to a tenth of a cent. Free, MIT, and
+the [core](https://github.com/squatch-stack/squatch-tuner) is one folder of C++ headers,
+also the first block of [squatch-dsp](https://github.com/squatch-stack/squatch-dsp).
 
 ---
 
-## Now building
+## Audio: tools for players
 
-<a href="https://github.com/squatch-stack/hdc-holo"><img src="holo-logo.png" width="88" align="right" alt="holo — a saguaro in a two-source interference field"></a>
+| Repository | What it does |
+|---|---|
+| **[squatch-tuner](https://github.com/squatch-stack/squatch-tuner)**<br><sub>C++17 · MIT</sub> | A guitar and bass tuner built as a software strobe. Header-only, no dependencies, and it never allocates or locks in the audio path. It runs in the browser and on a Raspberry Pi, and is written for microcontrollers too. Re-pitch real guitar DI by exactly 7 cents and it measures the shift with a median error of 0.005 c and a 95th percentile of 0.13 c (MPM: 0.041 and 0.25). `make results` reproduces every number. |
+| **[squatch-dsp](https://github.com/squatch-stack/squatch-dsp)**<br><sub>C++17 · MIT</sub> | The open C++ sound engine that Squatch tools share. Each block is written once and each target gets a thin host: today JACK on a Raspberry Pi and WebAssembly in the browser. The tuner is its first block, alongside a lookahead limiter, a gate and an EQ. Its tests prove that no block allocates or locks in the audio path, and check each block against a reference render. |
+| **[NeuralAmpModelerCore](https://github.com/squatch-stack/NeuralAmpModelerCore)**<br><sub>fork · C++ · MIT</sub> | [Neural Amp Modeler](https://github.com/sdatkinson/neural-amp-modeler) is the open way guitarists capture amps and pedals. Our fork of its C++ core, for running NAM well on small hardware like the Raspberry Pi 5. |
 
-### [holo](https://github.com/squatch-stack/hdc-holo) — holographic computing on FHRR hypervectors
+## HDC: holographic computing research
 
-Data structures, Gaussian-splat scenes, learning, rendering, and CRDT
-replication — superposed in bundles of complex phasors, where a lookup
-is an inner product and capacity is a signal-to-noise budget.
+<a href="https://github.com/squatch-stack/hdc-holo"><img src="holo-logo.png" width="88" align="right" alt="holo: a saguaro in a two-source interference field"></a>
+
+| Repository | What it does |
+|---|---|
+| **[hdc-holo](https://github.com/squatch-stack/hdc-holo)**<br><sub>Python · Apache-2.0 · `pip install hdc-holo`</sub> | Data structures, Gaussian-splat scenes, learning, rendering and CRDT sync, superposed in complex FHRR hypervectors. A lookup is an inner product, and capacity is a signal-to-noise budget. v0.3.0 is on PyPI, with a [Zenodo DOI](https://doi.org/10.5281/zenodo.22116367). |
+| **[posekit](https://github.com/squatch-stack/posekit)**<br><sub>Swift · Apache-2.0</sub> | Camera poses from Apple's photogrammetry, for splat trainers. It writes nerfstudio and COLMAP formats on Apple silicon, with no CUDA. |
 
 <p align="center">
-  <img src="color_knot.gif" width="420" alt="a rainbow trefoil knot orbited live — every frame rendered from one 768KB hologram, no geometry at render time">
-  <br><sub><i>a whole colored 3-D scene orbited from ONE 768 KB complex
-  vector — no geometry exists at render time</i></sub>
+  <img src="color_knot.gif" width="420" alt="a rainbow trefoil knot orbited live, every frame rendered from one 768 KB hologram with no geometry at render time">
+  <br><sub><i>A whole colored 3-D scene orbited from one 768 KB complex vector.
+  No geometry exists at render time.</i></sub>
 </p>
 
-- **Measured, not claimed** — every technique ships with its capacity
-  law, ground-truth figures, deterministic tests, and the honest
-  negative results.
-- **Real captures** — a 519k-splat desert scan encoded, queried,
-  fitted, and orbited from holographic cell bundles on Apple silicon.
-- **Collaborative by algebra** — CRDT sync over Loro with
-  conflict-free undo: two processes co-paint one scene over TCP and
-  converge bit-for-bit.
-
-<sub>FSL-1.1 · every release converts to Apache-2.0 after two years ·
-[roadmap](https://github.com/squatch-stack/hdc-holo/blob/main/ROADMAP.md)</sub>
-
-### SquatchFlow — coming to the stack
-
-A macOS app from the studio bench, joining this account when it's
-ready to meet people.
+- **Measured, not claimed.** Every technique ships with its capacity law,
+  ground-truth figures, deterministic tests and the negative results.
+- **Honest about the limits.** As a storage format, a hologram is about 400&times;
+  larger than SPZ, and the README says so before anything else.
+- **Collaborative by algebra.** CRDT sync over Loro: two processes co-paint
+  one scene over TCP and converge bit-for-bit.
 
 ---
 
-## Elsewhere
+## Support the work
 
-[squatch.cc](https://squatch.cc) — the studio
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/tier-header-dark.svg">
+  <img src="assets/tier-header.svg" width="100%" alt="Sponsor Squatch Stack. Monthly tiers: $5 Open String, $10 In Tune, $25 Strobe, $100 Overtone, $250 Standing Wave.">
+</picture>
 
-<sub><i>Every mark in the family is the same interference field with a
-different canon silhouette — the sasquatch for the studio, the saguaro
-for holo. In the duet mark above, they are the field's two sources:
-two signals finding the shift that lets them resonate.</i></sub>
-</p>
+Everything here is free and open source. Sponsorship buys the two things open
+work runs short of: time to finish, and hardware to test on. One pool funds
+both tracks.
+
+| Where | Best for |
+|---|---|
+| **[GitHub Sponsors](https://github.com/sponsors/squatch-stack)** | Monthly or one-time. GitHub takes no fee on sponsorships from personal accounts. |
+| **Open Collective** <sub>(coming soon)</sub> <!-- https://opencollective.com/OPEN_COLLECTIVE_SLUG --> | Companies that want a public ledger of every expense. |
+| **Patreon** <sub>(coming soon)</sub> <!-- https://www.patreon.com/PATREON_HANDLE --> | A monthly build log with demos, and skin packs once the skin format opens. |
+| **[Ko-fi](https://ko-fi.com/squatchstack)** | A one-off tip, any amount. |
+| **Buy Me a Coffee** <sub>(coming soon)</sub> <!-- https://www.buymeacoffee.com/BMAC_HANDLE --> | A coffee from the tuner page. |
+
+### Sponsors
+
+Nobody yet. Be the first: your name goes here and in the next release notes.
+
+---
+
+<sub>Squatch Stack is the build account of [Squatch CC](https://squatch.cc), a
+software studio.</sub>
