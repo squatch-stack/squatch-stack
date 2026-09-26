@@ -63,7 +63,7 @@ both tracks.
 
 | Where | Best for |
 |---|---|
-| **[GitHub Sponsors](https://github.com/sponsors/squatch-stack)** | Monthly or one-time. GitHub takes no fee on sponsorships from personal accounts. |
+| **[GitHub Sponsors](https://github.com/sponsors/squatchlr)** | Monthly or one-time. GitHub takes no fee on sponsorships from personal accounts. |
 | **Open Collective** <sub>(coming soon)</sub> <!-- https://opencollective.com/OPEN_COLLECTIVE_SLUG --> | Companies that want a public ledger of every expense. |
 | **[Patreon](https://www.patreon.com/SquatchStack)** | A monthly build log with demos, and skin packs once the skin format opens. |
 | **[Ko-fi](https://ko-fi.com/squatchstack)** | A one-off tip, any amount. |
